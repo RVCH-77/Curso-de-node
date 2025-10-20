@@ -1,6 +1,5 @@
 const fs = require('node:fs')
 
-const {promisify} = require('node:util')
 // Leer el archivo archivo.txt y guardar su contenido en la variable text
 console.log("Contenido del primer texto:")
 // manera sincrona para leer archivos
