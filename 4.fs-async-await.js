@@ -1,21 +1,15 @@
-const fs = require('node:fs/promises')
-
-
-// Este solo en modulos nativos 
-// que no tiene promesas nativas 
-
-//const {promisify} = require('node:util')
-
-//const readFilePromise = promisify(fs.readFile)
+const fs = require('node:fs')
 
 // Leer el archivo archivo.txt y guardar su contenido en la variable text
 console.log("Contenido del primer texto:")
 // manera sincrona para leer archivos
-fs.readFile('./archivo.txt', 'utf-8').then( text =>
-     console.log( "Contenido del primer texto:",text)) 
+//const text = fs.readFileSync('./archivo.txt', 'utf-8')
+fs.readFile('./archivo.txt', 'utf-8', (err, text) =>{ // ejecuatas este callback cuando se termine de leer el archivo
+    console.log(text)
 
     
-    
+
+    })
 
 console.log( "hacer mas cosas mientras lee el archivo....")
 
